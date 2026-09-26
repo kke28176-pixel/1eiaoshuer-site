@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — UZ</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-veil" aria-hidden="true"></div>
+
+<header class="topbar solid" id="topbar">
+  <div class="topbar-left">
+    <a href="index.html" class="topbar-logo" style="opacity:1" aria-label="UZ home">
+      <img src="assets/logo.png" alt="UZ">
+    </a>
+  </div>
+  <nav class="topbar-nav">
+    <a href="index.html#players" data-i18n="nav_players">Built for Players</a>
+    <a href="index.html#create" data-i18n="nav_create">What We Make</a>
+    <a href="store.html" data-i18n="nav_shop">Shop</a>
+    <a href="team.html" data-i18n="nav_team">Team</a>
+    <a href="news.html" data-i18n="nav_news">News</a>
+    <a href="index.html#footer" data-i18n="nav_contact">Contact</a>
+    <a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a>
+    <a href="cart.html" class="topbar-cart-inline" id="cartBtnDesktop" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-badge"></span>
+    </a>
+    <a href="language.html" class="topbar-lang-pill">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </nav>
+  <button class="cart-btn" id="cartBtnMobile" aria-label="Cart">
+    <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="cart-badge"></span>
+  </button>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="p-crumb" id="pCrumb"><a href="index.html">UZ</a> ／ <span data-i18n="crumb_team">Team</span></div>
+
+<nav class="fullmenu" id="fullmenu" aria-hidden="true">
+  <ul class="fullmenu-list">
+    <li style="--i:0"><a href="index.html" data-i18n="nav_home">Home</a></li>
+    <li style="--i:1"><a href="index.html#players" data-i18n="nav_players">Built for Players</a></li>
+    <li style="--i:2"><a href="index.html#create" data-i18n="nav_create">What We Make</a></li>
+    <li style="--i:3"><a href="store.html" data-i18n="nav_shop">Shop</a></li>
+    <li style="--i:4"><a href="team.html" data-i18n="nav_team">Team</a></li>
+    <li style="--i:5"><a href="news.html" data-i18n="nav_news">News</a></li>
+    <li style="--i:6"><a href="index.html#footer" data-i18n="nav_contact">Contact</a></li>
+    <li style="--i:7"><a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a></li>
+  </ul>
+  <div class="fullmenu-foot">
+    <span data-i18n="region_label">Taiwan</span>
+    <a href="language.html" class="menu-lang-link">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="team-hero">
+    <p class="eyebrow-en">Meet the Team.</p>
+    <h1 data-i18n="team_h1">The people behind UZ</h1>
+    <p data-i18n="team_intro">The team is still coming together — this page will grow as new members join. Click a photo for the full introduction.</p>
+  </section>
+
+  <section class="team-grid">
+
+    <div class="team-card" data-member="ceo">
+      <div class="photo">
+        <img src="assets/team/ceo.jpg" alt="CEO photo">
+        <div class="photo-fallback">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          <span data-i18n="photo_add_ceo">Add a photo at<br>assets/team/ceo.jpg</span>
+        </div>
+      </div>
+      <h3 data-i18n="ceo_name">［Name TBD］</h3>
+      <p class="role" data-i18n="ceo_role">Founder &amp; CEO</p>
+      <p class="bio" data-i18n="ceo_bio">Leads UZ from its roots in the player community, setting the team's overall direction and long-term strategy. Short placeholder bio for now — swap in the real introduction later.</p>
+      <p class="team-card-hint" data-i18n="team_hint">Click for full profile →</p>
+    </div>
+
+    <div class="team-card" data-member="vice">
+      <div class="photo">
+        <img src="assets/team/vice_ceo.jpg" alt="Vice CEO photo">
+        <div class="photo-fallback">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          <span data-i18n="photo_add_vice">Add a photo at<br>assets/team/vice_ceo.jpg</span>
+        </div>
+      </div>
+      <h3 data-i18n="vice_name">［Name TBD］</h3>
+      <p class="role" data-i18n="vice_role">Vice CEO</p>
+      <p class="bio" data-i18n="vice_bio">Helps run day-to-day operations and cross-team coordination — UZ's indispensable second-in-command. Short placeholder bio for now — swap in the real introduction later.</p>
+      <p class="team-card-hint" data-i18n="team_hint">Click for full profile →</p>
+    </div>
+
+    <div class="team-card ghost">
+      <div class="photo">
+        <div class="photo-fallback" style="position:static;height:100%">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v4M16 3v4M4 8h16M6 21h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
+          <span data-i18n="it_status">Position open</span>
+        </div>
+      </div>
+      <h3 data-i18n="open_label">Open</h3>
+      <p class="role" data-i18n="it_role">IT</p>
+    </div>
+
+    <div class="team-card ghost">
+      <div class="photo">
+        <div class="photo-fallback" style="position:static;height:100%">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="8" r="2.6"/><circle cx="17" cy="8" r="2.6"/><circle cx="12" cy="8" r="2.6"/><path d="M3 20c0-2.8 1.8-5 4-5M21 20c0-2.8-1.8-5-4-5M8 20c0-2.8 1.8-5 4-5s4 2.2 4 5"/></svg>
+          <span data-i18n="board_status">Forming</span>
+        </div>
+      </div>
+      <h3 data-i18n="open_label">Open</h3>
+      <p class="role" data-i18n="board_role">Board</p>
+    </div>
+
+  </section>
+
+  <section class="cta">
+    <img src="assets/logo.png" alt="" class="cta-bolt">
+    <h2 data-i18n="team_cta_heading">Want to join UZ?</h2>
+    <a href="index.html#footer" class="cta-btn" data-i18n="team_cta_button">Let's talk</a>
+  </section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <img src="assets/logo.png" alt="UZ" class="footer-logo">
+    <div class="footer-cols">
+      <div>
+        <h3 data-i18n="footer_about">About</h3>
+        <a href="index.html#players" data-i18n="nav_players">Built for Players</a>
+        <a href="index.html#create" data-i18n="nav_create">What We Make</a>
+        <a href="team.html" data-i18n="nav_team">Team</a>
+        <a href="news.html" data-i18n="nav_news">News</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_create_title">Create</h3>
+        <a href="store.html" data-i18n="nav_shop">Shop</a>
+        <a href="#" data-i18n="footer_roblox">Roblox Work</a>
+        <a href="#" data-i18n="footer_competitive">Competitive</a>
+        <a href="#" data-i18n="footer_join">Join Us</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_contact_title">Contact</h3>
+        <a href="#" data-i18n="footer_partnerships">Partnerships</a>
+        <a href="#" data-i18n="footer_press">Press</a>
+        <a href="#" data-i18n="footer_social">Social</a>
+        <a href="language.html" data-i18n="nav_language">Language</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 UZ.</span>
+    <span data-i18n="footer_rights">All rights reserved.</span>
+  </div>
+</footer>
+
+<div class="member-modal" id="memberModal" aria-hidden="true">
+  <div class="member-modal-backdrop"></div>
+  <div class="member-modal-card">
+    <button class="member-modal-close" aria-label="Close">
+      <svg viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+    <div class="member-modal-photo">
+      <div class="photo">
+        <img src="" alt="">
+        <div class="photo-fallback">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          <span data-i18n="modal_no_photo">No photo yet</span>
+        </div>
+      </div>
+    </div>
+    <div class="member-modal-body">
+      <h3></h3>
+      <p class="member-modal-role"></p>
+      <div class="member-modal-bio"></div>
+      <p class="member-modal-fact"></p>
+    </div>
+  </div>
+</div>
+
+<script src="translations.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In — UZ</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-veil" aria-hidden="true"></div>
+
+<header class="topbar solid" id="topbar">
+  <div class="topbar-left">
+    <a href="index.html" class="topbar-logo" style="opacity:1" aria-label="UZ home">
+      <img src="assets/logo.png" alt="UZ">
+    </a>
+  </div>
+  <nav class="topbar-nav">
+    <a href="index.html#players" data-i18n="nav_players">Built for Players</a>
+    <a href="index.html#create" data-i18n="nav_create">What We Make</a>
+    <a href="store.html" data-i18n="nav_shop">Shop</a>
+    <a href="team.html" data-i18n="nav_team">Team</a>
+    <a href="news.html" data-i18n="nav_news">News</a>
+    <a href="index.html#footer" data-i18n="nav_contact">Contact</a>
+    <a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a>
+    <a href="cart.html" class="topbar-cart-inline" id="cartBtnDesktop" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-badge"></span>
+    </a>
+    <a href="language.html" class="topbar-lang-pill">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </nav>
+  <button class="cart-btn" id="cartBtnMobile" aria-label="Cart">
+    <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="cart-badge"></span>
+  </button>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="p-crumb" id="pCrumb"><a href="index.html">UZ</a> ／ <span data-i18n="crumb_login">Sign In</span></div>
+
+<nav class="fullmenu" id="fullmenu" aria-hidden="true">
+  <ul class="fullmenu-list">
+    <li style="--i:0"><a href="index.html" data-i18n="nav_home">Home</a></li>
+    <li style="--i:1"><a href="index.html#players" data-i18n="nav_players">Built for Players</a></li>
+    <li style="--i:2"><a href="index.html#create" data-i18n="nav_create">What We Make</a></li>
+    <li style="--i:3"><a href="store.html" data-i18n="nav_shop">Shop</a></li>
+    <li style="--i:4"><a href="team.html" data-i18n="nav_team">Team</a></li>
+    <li style="--i:5"><a href="news.html" data-i18n="nav_news">News</a></li>
+    <li style="--i:6"><a href="index.html#footer" data-i18n="nav_contact">Contact</a></li>
+    <li style="--i:7"><a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a></li>
+  </ul>
+  <div class="fullmenu-foot">
+    <span data-i18n="region_label">Taiwan</span>
+    <a href="language.html" class="menu-lang-link">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </div>
+</nav>
+
+<main>
+  <div class="auth-wrap">
+    <div class="auth-card">
+
+      <!-- Step 1: email -->
+      <div class="auth-step" id="authStepEmail">
+        <h1 data-i18n="auth_h1_email">Sign in to UZ</h1>
+        <p class="auth-sub" data-i18n="auth_sub_email">Enter your email and we'll send a one-time verification code.</p>
+
+        <button type="button" class="discord-btn" id="authDiscordBtn">
+          <svg viewBox="0 0 24 24"><path d="M20.3 5.3A17.6 17.6 0 0 0 15.9 4c-.2.4-.5.9-.6 1.3a16.3 16.3 0 0 0-4.7 0A9.8 9.8 0 0 0 10 4a17.6 17.6 0 0 0-4.4 1.4C2.9 9 2.2 12.6 2.5 16.2a17.7 17.7 0 0 0 5.4 2.7c.4-.6.8-1.2 1.1-1.9-.6-.2-1.2-.5-1.8-.9l.4-.3c3.4 1.6 7.1 1.6 10.5 0l.4.3c-.6.4-1.2.7-1.8.9.3.7.7 1.3 1.1 1.9a17.6 17.6 0 0 0 5.4-2.7c.4-4.2-.7-7.8-2.9-10.9zM9.7 14c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm4.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>
+          <span data-i18n="auth_discord_btn">Continue with Discord</span>
+        </button>
+        <div class="auth-divider" data-i18n="auth_or">or</div>
+
+        <input type="email" class="auth-field" id="authEmailInput" data-i18n-placeholder="auth_email_placeholder" placeholder="you@example.com" autocomplete="email">
+        <button class="auth-btn" id="authSendBtn" data-i18n="auth_send_code">Send code</button>
+        <p class="auth-error" id="authError"></p>
+      </div>
+
+      <!-- Step 2: code -->
+      <div class="auth-step" id="authStepCode">
+        <h1 data-i18n="auth_h1_code">Enter your code</h1>
+        <p class="auth-sub" id="authCodeSub">We sent a 6-digit code to <b>you@example.com</b>.</p>
+        <input type="text" class="auth-field code-field" id="authCodeInput" inputmode="numeric" maxlength="6" data-i18n-placeholder="auth_code_placeholder" placeholder="······" autocomplete="one-time-code">
+        <button class="auth-btn" id="authVerifyBtn" data-i18n="auth_verify">Verify &amp; sign in</button>
+        <p class="auth-error" id="authError2"></p>
+        <div class="auth-links">
+          <button id="authChangeEmailBtn" data-i18n="auth_change_email">Use a different email</button>
+          <button id="authResendBtn" data-i18n="auth_resend">Resend code</button>
+        </div>
+        <p class="auth-hint" data-i18n="auth_check_spam">Didn't get it? Check your spam folder, or resend the code above.</p>
+      </div>
+
+      <!-- Step 3: first-time profile setup -->
+      <div class="auth-step" id="authStepProfile">
+        <h1 data-i18n="auth_h1_profile">Set up your profile</h1>
+        <p class="auth-sub" data-i18n="auth_sub_profile">One quick step since this is your first time signing in.</p>
+        <input type="text" class="auth-field" id="authNameInput" data-i18n-placeholder="auth_name_placeholder" placeholder="Display name, e.g. Alex" autocomplete="nickname">
+        <input type="password" class="auth-field" id="authPasswordInput" data-i18n-placeholder="auth_password_placeholder" placeholder="Create a password" autocomplete="new-password">
+        <input type="password" class="auth-field" id="authPasswordConfirmInput" data-i18n-placeholder="auth_password_confirm_placeholder" placeholder="Confirm password" autocomplete="new-password">
+        <button class="auth-btn" id="authSaveProfileBtn" data-i18n="auth_save_continue">Save &amp; continue</button>
+        <p class="auth-error" id="authError3"></p>
+      </div>
+
+      <!-- Step 4: signed in -->
+      <div class="auth-step" id="authStepSuccess">
+        <div class="auth-welcome-avatar" id="authWelcomeAvatar"></div>
+        <h1 id="authWelcomeTitle">Welcome, Alex</h1>
+        <p class="auth-sub" data-i18n="auth_welcome_sub">You've arrived at the UZ team.</p>
+        <button class="auth-signout-btn" id="authSignOutBtn" data-i18n="auth_sign_out">Sign out</button>
+        <a href="index.html" class="auth-home-link" data-i18n="auth_back_home">Back to homepage</a>
+      </div>
+
+      <button type="button" class="admin-toggle" id="adminToggle" data-i18n="admin_toggle_label">Admin sign in</button>
+      <div class="admin-panel" id="adminPanel">
+        <input type="text" class="auth-field" id="adminUsernameInput" data-i18n-placeholder="admin_username_placeholder" placeholder="Admin username" autocomplete="username">
+        <input type="password" class="auth-field" id="adminPasswordInput" data-i18n-placeholder="admin_password_placeholder" placeholder="Admin password" autocomplete="current-password">
+        <button class="auth-btn" id="adminSignInBtn" data-i18n="admin_signin_btn">Sign in as admin</button>
+        <p class="auth-error" id="adminError"></p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <img src="assets/logo.png" alt="UZ" class="footer-logo">
+    <div class="footer-cols">
+      <div>
+        <h3 data-i18n="footer_about">About</h3>
+        <a href="index.html#players" data-i18n="nav_players">Built for Players</a>
+        <a href="index.html#create" data-i18n="nav_create">What We Make</a>
+        <a href="team.html" data-i18n="nav_team">Team</a>
+        <a href="news.html" data-i18n="nav_news">News</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_create_title">Create</h3>
+        <a href="store.html" data-i18n="nav_shop">Shop</a>
+        <a href="#" data-i18n="footer_roblox">Roblox Work</a>
+        <a href="#" data-i18n="footer_competitive">Competitive</a>
+        <a href="#" data-i18n="footer_join">Join Us</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_contact_title">Contact</h3>
+        <a href="#" data-i18n="footer_partnerships">Partnerships</a>
+        <a href="#" data-i18n="footer_press">Press</a>
+        <a href="#" data-i18n="footer_social">Social</a>
+        <a href="language.html" data-i18n="nav_language">Language</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 UZ.</span>
+    <span data-i18n="footer_rights">All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

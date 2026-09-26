@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — UZ</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-veil" aria-hidden="true"></div>
+
+<header class="topbar solid" id="topbar">
+  <div class="topbar-left">
+    <a href="index.html" class="topbar-logo" style="opacity:1" aria-label="UZ home">
+      <img src="assets/logo.png" alt="UZ">
+    </a>
+  </div>
+  <nav class="topbar-nav">
+    <a href="index.html#players" data-i18n="nav_players">Built for Players</a>
+    <a href="index.html#create" data-i18n="nav_create">What We Make</a>
+    <a href="store.html" data-i18n="nav_shop">Shop</a>
+    <a href="team.html" data-i18n="nav_team">Team</a>
+    <a href="news.html" data-i18n="nav_news">News</a>
+    <a href="index.html#footer" data-i18n="nav_contact">Contact</a>
+    <a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a>
+    <a href="cart.html" class="topbar-cart-inline" id="cartBtnDesktop" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-badge"></span>
+    </a>
+    <a href="language.html" class="topbar-lang-pill">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </nav>
+  <button class="cart-btn" id="cartBtnMobile" aria-label="Cart">
+    <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="cart-badge"></span>
+  </button>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="p-crumb" id="pCrumb"><a href="index.html">UZ</a> ／ <span data-i18n="nav_shop">Shop</span></div>
+
+<nav class="fullmenu" id="fullmenu" aria-hidden="true">
+  <ul class="fullmenu-list">
+    <li style="--i:0"><a href="index.html" data-i18n="nav_home">Home</a></li>
+    <li style="--i:1"><a href="index.html#players" data-i18n="nav_players">Built for Players</a></li>
+    <li style="--i:2"><a href="index.html#create" data-i18n="nav_create">What We Make</a></li>
+    <li style="--i:3"><a href="store.html" data-i18n="nav_shop">Shop</a></li>
+    <li style="--i:4"><a href="team.html" data-i18n="nav_team">Team</a></li>
+    <li style="--i:5"><a href="news.html" data-i18n="nav_news">News</a></li>
+    <li style="--i:6"><a href="index.html#footer" data-i18n="nav_contact">Contact</a></li>
+    <li style="--i:7"><a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a></li>
+  </ul>
+  <div class="fullmenu-foot">
+    <span data-i18n="region_label">Taiwan</span>
+    <a href="language.html" class="menu-lang-link">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="team-hero">
+    <p class="eyebrow-en">The UZ Shop.</p>
+    <h1 data-i18n="shop_h1">The UZ Shop</h1>
+    <p data-i18n="shop_intro">Our first physical products — built the same way we build everything else.</p>
+  </section>
+
+  <section class="shop-detail" id="onyx" data-product-card="onyx">
+    <div class="shop-detail-img"><img src="assets/products/crate-onyx.webp" alt=""></div>
+    <div class="shop-detail-copy">
+      <h2 data-i18n="shop_onyx_name">UZ Field Case — Onyx</h2>
+      <div class="shop-detail-price">$89.00</div>
+      <p data-i18n="shop_onyx_desc">A rugged, all-black case built to protect your gear between matches. Snap latches, reinforced corners.</p>
+      <div class="qty-row">
+        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+        <span class="qty-value">1</span>
+        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+      </div>
+      <button class="add-cart-btn" data-i18n="shop_add_to_cart">Add to cart</button>
+    </div>
+  </section>
+
+  <section class="shop-detail" id="ultraviolet" data-product-card="ultraviolet">
+    <div class="shop-detail-img"><img src="assets/products/crate-ultraviolet.webp" alt=""></div>
+    <div class="shop-detail-copy">
+      <h2 data-i18n="shop_ultraviolet_name">UZ Field Case — Ultraviolet</h2>
+      <div class="shop-detail-price">$89.00</div>
+      <p data-i18n="shop_ultraviolet_desc">The same rugged shell in a color that stands out at every LAN. Limited run.</p>
+      <div class="qty-row">
+        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+        <span class="qty-value">1</span>
+        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+      </div>
+      <button class="add-cart-btn" data-i18n="shop_add_to_cart">Add to cart</button>
+    </div>
+  </section>
+
+  <section class="shop-detail" id="recon" data-product-card="recon">
+    <div class="shop-detail-img"><img src="assets/products/crate-recon.webp" alt=""></div>
+    <div class="shop-detail-copy">
+      <h2 data-i18n="shop_recon_name">UZ Field Case — Recon</h2>
+      <div class="shop-detail-price">$79.00</div>
+      <p data-i18n="shop_recon_desc">Olive styling inspired by our in-game Recon skin line. Same build, different look.</p>
+      <div class="qty-row">
+        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+        <span class="qty-value">1</span>
+        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+      </div>
+      <button class="add-cart-btn" data-i18n="shop_add_to_cart">Add to cart</button>
+    </div>
+  </section>
+
+  <section class="cta">
+    <img src="assets/logo.png" alt="" class="cta-bolt">
+    <h2 data-i18n="nav_cart">Cart</h2>
+    <a href="cart.html" class="cta-btn" data-i18n="cart_h1">Your Cart</a>
+  </section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <img src="assets/logo.png" alt="UZ" class="footer-logo">
+    <div class="footer-cols">
+      <div>
+        <h3 data-i18n="footer_about">About</h3>
+        <a href="index.html#players" data-i18n="nav_players">Built for Players</a>
+        <a href="index.html#create" data-i18n="nav_create">What We Make</a>
+        <a href="team.html" data-i18n="nav_team">Team</a>
+        <a href="news.html" data-i18n="nav_news">News</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_create_title">Create</h3>
+        <a href="store.html" data-i18n="nav_shop">Shop</a>
+        <a href="#" data-i18n="footer_roblox">Roblox Work</a>
+        <a href="#" data-i18n="footer_competitive">Competitive</a>
+        <a href="#" data-i18n="footer_join">Join Us</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_contact_title">Contact</h3>
+        <a href="#" data-i18n="footer_partnerships">Partnerships</a>
+        <a href="#" data-i18n="footer_press">Press</a>
+        <a href="#" data-i18n="footer_social">Social</a>
+        <a href="language.html" data-i18n="nav_language">Language</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 UZ.</span>
+    <span data-i18n="footer_rights">All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

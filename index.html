@@ -1,9 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>EIAOSHUER</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UZ — Play. Create. Connect.</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>我的網站成功了！</h1>
+
+<div class="noise-veil" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
+  <div class="topbar-left">
+    <a href="#top" class="topbar-logo" aria-label="UZ home">
+      <img src="assets/logo.png" alt="UZ">
+    </a>
+  </div>
+  <nav class="topbar-nav">
+    <a href="#players" data-i18n="nav_players">Built for Players</a>
+    <a href="#create" data-i18n="nav_create">What We Make</a>
+    <a href="store.html" data-i18n="nav_shop">Shop</a>
+    <a href="team.html" data-i18n="nav_team">Team</a>
+    <a href="news.html" data-i18n="nav_news">News</a>
+    <a href="#footer" data-i18n="nav_contact">Contact</a>
+    <a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a>
+    <a href="cart.html" class="topbar-cart-inline" id="cartBtnDesktop" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-badge"></span>
+    </a>
+    <a href="language.html" class="topbar-lang-pill">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </nav>
+  <button class="cart-btn" id="cartBtnMobile" aria-label="Cart">
+    <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="cart-badge"></span>
+  </button>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<nav class="fullmenu" id="fullmenu" aria-hidden="true">
+  <ul class="fullmenu-list">
+    <li style="--i:0"><a href="#top" data-close data-i18n="nav_home">Home</a></li>
+    <li style="--i:1"><a href="#players" data-close data-i18n="nav_players">Built for Players</a></li>
+    <li style="--i:2"><a href="#create" data-close data-i18n="nav_create">What We Make</a></li>
+    <li style="--i:3"><a href="store.html" data-i18n="nav_shop">Shop</a></li>
+    <li style="--i:4"><a href="team.html" data-i18n="nav_team">Team</a></li>
+    <li style="--i:5"><a href="news.html" data-i18n="nav_news">News</a></li>
+    <li style="--i:6"><a href="#footer" data-close data-i18n="nav_contact">Contact</a></li>
+    <li style="--i:7"><a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a></li>
+  </ul>
+  <div class="fullmenu-foot">
+    <span data-i18n="region_label">Taiwan</span>
+    <a href="language.html" class="menu-lang-link">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <div class="hero-parallax">
+      <div class="hero-bolt" aria-hidden="true">
+        <img src="assets/logo.png" alt="" class="hero-bolt-img">
+      </div>
+      <p class="hero-kicker">Play. Create. Connect.</p>
+      <h1 class="hero-title">
+        <span class="line" data-i18n="home_hero_line1">We don't just play games.</span>
+        <span class="line" data-i18n="home_hero_line2">We create them.</span>
+      </h1>
+      <p class="hero-sub" data-i18n="home_hero_sub">UZ is a group of players and creators. We build games, content and community — and turn what we love into real work.</p>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span></span>
+      <em data-i18n="home_scroll">Scroll</em>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><b>2024</b><span data-i18n="stat_founded">Founded</span></div>
+    <div class="stat"><b>Roblox</b><span data-i18n="stat_origin">Starting point</span></div>
+    <div class="stat"><b>4</b><span data-i18n="stat_fields">Creative fields</span></div>
+    <div class="stat"><b>∞</b><span data-i18n="stat_possibilities">Possibilities</span></div>
+  </section>
+
+  <section class="product" id="players">
+    <div class="product-copy">
+      <p class="eyebrow-en">Built for Players.</p>
+      <h2 data-i18n="players_heading">Built for<br>players.</h2>
+      <p class="product-desc" data-i18n="players_body">From Roblox to competitive games. From an idea to something real. Every project starts with what we love to play.</p>
+    </div>
+    <div class="product-visual parallax-visual">
+      <svg viewBox="0 0 320 320" class="device-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3a3a3d"/>
+            <stop offset="100%" stop-color="#1d1d1f"/>
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="160" r="120" fill="none" stroke="url(#gA)" stroke-width="2" opacity=".5"/>
+        <circle cx="160" cy="160" r="86" fill="none" stroke="var(--spark)" stroke-width="2" opacity=".55"/>
+        <path d="M136 118 L212 160 L136 202 Z" fill="url(#gA)" stroke="none"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="reel" id="reel">
+    <div class="reel-pin" id="reelPin">
+      <div class="reel-stage" id="reelStage">
+        <div class="reel-frame f1"><span class="reel-word">Play</span></div>
+        <div class="reel-frame f2"><span class="reel-word">Create</span></div>
+        <div class="reel-frame f3"><span class="reel-word">Connect</span></div>
+        <div class="reel-spark" id="reelSpark"></div>
+      </div>
+      <div class="reel-caption">
+        <p class="eyebrow-en" style="opacity:.6">Made by UZ.</p>
+        <p data-i18n="reel_caption">We believe players can be creators.<br>And creating can change the game.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase" id="create">
+    <p class="eyebrow-en">Create Something New.</p>
+    <h2 class="showcase-title" data-i18n="create_heading">Explore what's possible</h2>
+    <div class="showcase-track drag-track" id="createTrack">
+      <div class="showcase-card" style="--c:#1d1d1f;--t:#f5f5f7">
+        <div class="showcase-swatch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="8" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><path d="M16 10v4M18 12h-4"/></svg>
+        </div>
+        <p data-i18n="create_gamedev">Game Dev</p>
+      </div>
+      <div class="showcase-card" style="--c:#3aa0ff;--t:#f5f5f7">
+        <div class="showcase-swatch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.4"/><path d="M9 6l1.4-2h3.2L15 6"/></svg>
+        </div>
+        <p data-i18n="create_content">Content</p>
+      </div>
+      <div class="showcase-card" style="--c:#4b4b4f;--t:#f5f5f7">
+        <div class="showcase-swatch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l1-5L17 3l4 4L9 19l-5 1z"/><path d="M14 6l4 4"/></svg>
+        </div>
+        <p data-i18n="create_design">Design</p>
+      </div>
+      <div class="showcase-card" style="--c:#6f7078;--t:#f5f5f7">
+        <div class="showcase-swatch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M14.5 14.2c2.6.4 4.5 2.7 4.5 5.8"/></svg>
+        </div>
+        <p data-i18n="create_community">Community</p>
+      </div>
+    </div>
+    <div class="showcase-dots drag-dots" id="createDots"></div>
+    <p class="p-hero-sub" style="margin-top:44px" data-i18n="create_tagline">All for a better experience.</p>
+  </section>
+
+  <section class="showcase" id="shop-teaser">
+    <p class="eyebrow-en">The UZ Shop.</p>
+    <h2 class="showcase-title" data-i18n="shop_h1">The UZ Shop</h2>
+    <p class="p-hero-sub" style="margin-bottom:44px" data-i18n="shop_intro">Our first physical products — built the same way we build everything else.</p>
+    <div class="shop-grid" style="padding-bottom:0">
+      <div class="shop-card">
+        <div class="shop-card-img"><img src="assets/products/crate-onyx.webp" alt=""></div>
+        <h3 data-i18n="shop_onyx_name">UZ Field Case — Onyx</h3>
+        <div class="shop-price">$89</div>
+        <p data-i18n="shop_onyx_desc">A rugged, all-black case built to protect your gear.</p>
+        <a href="store.html#onyx" class="shop-more" data-i18n="shop_learn_more">Learn more</a>
+      </div>
+      <div class="shop-card">
+        <div class="shop-card-img"><img src="assets/products/crate-ultraviolet.webp" alt=""></div>
+        <h3 data-i18n="shop_ultraviolet_name">UZ Field Case — Ultraviolet</h3>
+        <div class="shop-price">$89</div>
+        <p data-i18n="shop_ultraviolet_desc">The same rugged shell in a color that stands out.</p>
+        <a href="store.html#ultraviolet" class="shop-more" data-i18n="shop_learn_more">Learn more</a>
+      </div>
+      <div class="shop-card">
+        <div class="shop-card-img"><img src="assets/products/crate-recon.webp" alt=""></div>
+        <h3 data-i18n="shop_recon_name">UZ Field Case — Recon</h3>
+        <div class="shop-price">$79</div>
+        <p data-i18n="shop_recon_desc">Olive styling inspired by our in-game Recon skin line.</p>
+        <a href="store.html#recon" class="shop-more" data-i18n="shop_learn_more">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <img src="assets/logo.png" alt="" class="cta-bolt">
+    <h2>Play. Create. Connect.</h2>
+    <p class="cta-sub" data-i18n="cta_lines">Play together.<br>Create together.<br>Connect together.</p>
+    <a href="team.html" class="cta-btn" data-i18n="cta_button">Meet the Team</a>
+  </section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <img src="assets/logo.png" alt="UZ" class="footer-logo">
+    <div class="footer-cols">
+      <div>
+        <h3 data-i18n="footer_about">About</h3>
+        <a href="#players" data-i18n="nav_players">Built for Players</a>
+        <a href="#create" data-i18n="nav_create">What We Make</a>
+        <a href="team.html" data-i18n="nav_team">Team</a>
+        <a href="news.html" data-i18n="nav_news">News</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_create_title">Create</h3>
+        <a href="store.html" data-i18n="nav_shop">Shop</a>
+        <a href="#" data-i18n="footer_roblox">Roblox Work</a>
+        <a href="#" data-i18n="footer_competitive">Competitive</a>
+        <a href="#" data-i18n="footer_join">Join Us</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_contact_title">Contact</h3>
+        <a href="#" data-i18n="footer_partnerships">Partnerships</a>
+        <a href="#" data-i18n="footer_press">Press</a>
+        <a href="#" data-i18n="footer_social">Social</a>
+        <a href="language.html" data-i18n="nav_language">Language</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 UZ.</span>
+    <span data-i18n="footer_rights">All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

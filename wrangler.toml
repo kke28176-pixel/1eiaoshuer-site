@@ -1,0 +1,11 @@
+name = "uz-site"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "."
+
+# After creating your D1 database (see DEPLOY.md), put its real ID below.
+# This binding is what makes `env.DB` available inside every function in
+# functions/api/*.js.
+[[d1_databases]]
+binding = "DB"
+database_name = "uz_db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

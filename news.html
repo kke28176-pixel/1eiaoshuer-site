@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News — UZ</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-page">
+
+<div class="noise-veil" aria-hidden="true"></div>
+
+<header class="topbar solid" id="topbar">
+  <div class="topbar-left">
+    <a href="index.html" class="topbar-logo" style="opacity:1" aria-label="UZ home">
+      <img src="assets/logo.png" alt="UZ">
+    </a>
+  </div>
+  <nav class="topbar-nav">
+    <a href="index.html#players" data-i18n="nav_players">Built for Players</a>
+    <a href="index.html#create" data-i18n="nav_create">What We Make</a>
+    <a href="store.html" data-i18n="nav_shop">Shop</a>
+    <a href="team.html" data-i18n="nav_team">Team</a>
+    <a href="news.html" data-i18n="nav_news">News</a>
+    <a href="index.html#footer" data-i18n="nav_contact">Contact</a>
+    <a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a>
+    <a href="cart.html" class="topbar-cart-inline" id="cartBtnDesktop" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-badge"></span>
+    </a>
+    <a href="language.html" class="topbar-lang-pill">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </nav>
+  <button class="cart-btn" id="cartBtnMobile" aria-label="Cart">
+    <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <span class="cart-badge"></span>
+  </button>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="p-crumb" id="pCrumb"><a href="index.html">UZ</a> ／ <span data-i18n="crumb_news">News</span></div>
+
+<nav class="fullmenu" id="fullmenu" aria-hidden="true">
+  <ul class="fullmenu-list">
+    <li style="--i:0"><a href="index.html" data-i18n="nav_home">Home</a></li>
+    <li style="--i:1"><a href="index.html#players" data-i18n="nav_players">Built for Players</a></li>
+    <li style="--i:2"><a href="index.html#create" data-i18n="nav_create">What We Make</a></li>
+    <li style="--i:3"><a href="store.html" data-i18n="nav_shop">Shop</a></li>
+    <li style="--i:4"><a href="team.html" data-i18n="nav_team">Team</a></li>
+    <li style="--i:5"><a href="news.html" data-i18n="nav_news">News</a></li>
+    <li style="--i:6"><a href="index.html#footer" data-i18n="nav_contact">Contact</a></li>
+    <li style="--i:7"><a href="login.html" class="nav-auth-slot"><span class="nav-avatar" aria-hidden="true"></span><span class="nav-auth-name" data-i18n="nav_signin">Sign In</span></a></li>
+  </ul>
+  <div class="fullmenu-foot">
+    <span data-i18n="region_label">Taiwan</span>
+    <a href="language.html" class="menu-lang-link">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.8 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.8-4-9s1.5-6.4 4-9z"/></svg>
+      <span data-lang-name>English</span>
+    </a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="team-hero">
+    <div class="gradient-logo" aria-hidden="true"></div>
+    <p class="eyebrow-en">Latest News.</p>
+    <h1 data-i18n="news_h1">News</h1>
+    <p data-i18n="news_intro">Updates, announcements and behind-the-scenes moments from UZ — all posted here first.</p>
+  </section>
+
+  <!--
+    Add a new post: copy one whole <article class="news-card"> ... </article>
+    block below, paste it at the top (newest first), then give it new
+    data-i18n keys and add matching entries to translations.js for
+    every language.
+  -->
+  <section class="news-grid">
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-tag" data-i18n="tag_announcement">Announcement</span>
+        <span class="news-date">2026.09.17</span>
+      </div>
+      <h3 data-i18n="news1_title">The UZ website is live</h3>
+      <p data-i18n="news1_body">Starting today, you can get to know UZ, meet the team, and follow every step from here on out. More news soon.</p>
+      <a href="#" class="news-more" data-i18n="news1_link">Read more</a>
+    </article>
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-tag" data-i18n="tag_team">Team</span>
+        <span class="news-date">2026.09.17</span>
+      </div>
+      <h3 data-i18n="news2_title">Team page is up</h3>
+      <p data-i18n="news2_body">Meet the people leading UZ forward. The team page is live now, and will keep growing as new members join.</p>
+      <a href="team.html" class="news-more" data-i18n="news2_link">Take a look</a>
+    </article>
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-tag" data-i18n="tag_create">Create</span>
+        <span class="news-date" data-i18n="date_soon">Coming soon</span>
+      </div>
+      <h3 data-i18n="news3_title">Our first project is on the way</h3>
+      <p data-i18n="news3_body">From Roblox to competitive games, we're polishing our first real project. The moment it's ready, you'll hear it here first.</p>
+      <a href="#" class="news-more" data-i18n="news3_link">Read more</a>
+    </article>
+
+  </section>
+
+  <section class="cta">
+    <img src="assets/logo.png" alt="" class="cta-bolt">
+    <h2 data-i18n="news_cta_heading">Don't want to miss anything?</h2>
+    <a href="index.html#footer" class="cta-btn" data-i18n="news_cta_button">Follow our socials</a>
+  </section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <img src="assets/logo.png" alt="UZ" class="footer-logo">
+    <div class="footer-cols">
+      <div>
+        <h3 data-i18n="footer_about">About</h3>
+        <a href="index.html#players" data-i18n="nav_players">Built for Players</a>
+        <a href="index.html#create" data-i18n="nav_create">What We Make</a>
+        <a href="team.html" data-i18n="nav_team">Team</a>
+        <a href="news.html" data-i18n="nav_news">News</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_create_title">Create</h3>
+        <a href="store.html" data-i18n="nav_shop">Shop</a>
+        <a href="#" data-i18n="footer_roblox">Roblox Work</a>
+        <a href="#" data-i18n="footer_competitive">Competitive</a>
+        <a href="#" data-i18n="footer_join">Join Us</a>
+      </div>
+      <div>
+        <h3 data-i18n="footer_contact_title">Contact</h3>
+        <a href="#" data-i18n="footer_partnerships">Partnerships</a>
+        <a href="#" data-i18n="footer_press">Press</a>
+        <a href="#" data-i18n="footer_social">Social</a>
+        <a href="language.html" data-i18n="nav_language">Language</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 UZ.</span>
+    <span data-i18n="footer_rights">All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
